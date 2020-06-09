@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Gift{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block content %}
+    <p class="heading">
+    Send a gift for a friend
+    </p>
+    <p style="font-size: 20px">
+    Choose a friend
+    </p>
+    {% for friend in friends %}
+        <input class="form-input" type="radio" id="{{ friend[0] }}" name="friend" value="{{ friend[0] }}">
+        <label for="{{ friend[0] }}">{{ friend[1] }}</label><br>
+    {% endfor %}
+
+    <br><br>
+    <p>
+        <label class="form-label" for="gift">Gift:</label><br/>
+        <input class="form-input" type="text" name="gift">
+    </p>
+    <p>
+        <label class="form-label" for="date">Date:</label><br/>
+        <input class="date-input" type="date" name="date">
+    </p>
+
+    <p><input type="submit" value="Send"></p>
+
+{% endblock %}

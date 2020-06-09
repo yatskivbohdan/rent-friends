@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">{% endblock %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    {% for button in buttons %}
+        <input class="menu-item" type="submit" value="{{ button }}" name="button">
+    {% endfor %}
+{% endblock %}
+{% block additional %}
+     <div class="home-body">
+        <img src="{{ url_for('static',filename='img/main-page-friends.png') }}" alt="black-friends"/>
+        <div class="main-description">
+            <h2>What do we offer?</h2>
+            <p>
+                Are you moving to a new city, travel, or just going on a walk?
+            </p>
+            <p>
+                With "Rent a friend!" you can hire a frined to go to an event or party with you, teach you a new skill or hobby, help you meet new people, show you around town, or just someone for a stroll.
+            </p>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    <footer>
+    <div class="footer-container">
+        <p>
+            Made by
+        </p>
+        <p>
+            Vitalii Papka, Julia Pochynok, Sophia Petsyukh, Alina Vorobchuk and Bohdan Yatskiv
+        </p>
+        <p>
+            UCU, Lviv 2020
+        </p>
+    </div>
+</footer>
+{% endblock %}

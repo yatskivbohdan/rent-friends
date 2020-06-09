@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Deposit{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block header %}
+    <div class="header-container">
+       <h1>Rent a Friend!</h1>
+    </div>
+{% endblock %}
+{% block content %}
+    <p class="heading">
+       Deposit money
+    </p>
+    <p style="font-size: 20px">
+        Enter the card number and money sum
+    </p>
+    <p>
+        <label >Card:</label><br/>
+        <input class="form-input" type="text" required>
+    </p>
+    <p>
+        <label for="deposit">Deposit money:</label><br/>
+        <input class = "form-input" type="number" name="deposit" required>
+    </p>
+    <p><input type="submit" value="Submit"></p>
+
+{% endblock %}

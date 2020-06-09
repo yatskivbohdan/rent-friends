@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">{% endblock %}
+{% block header %}
+    <div class="header-container">
+       <h1>Rent a Friend!</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p class="heading">
+        Register a new account
+    </p>
+    <p>
+        <label for="full_name">Full name:</label>
+    </p>
+    <p>
+        <input placeholder="full name" class="form-input" type="text" name="full_name" required>
+    </p>
+    <p>
+        <label for="age">Age:</label>
+    </p>
+    <p>
+        <input placeholder="age" class="form-input" type="text" name="age" required>
+    </p>
+    <p>
+        <label for="phone">Phone number:</label>
+    </p>
+    <p>
+        <input placeholder="phone number" class="form-input" type="text" name="phone" required>
+    </p>
+    <p><input type="submit" value="Register" name="submit" id=""></p>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">{% endblock %}
+{% block header %}
+    <div class="header-container">
+       <h1>Rent a Friend!</h1>
+    </div>
+{% endblock %}
+{% block content %}
+    <p class="heading">
+        Log in
+    </p>
+    <p>
+        <label class="form-label" for="username">Username:</label>
+    </p>
+    <p>
+        <input class="form-input" placeholder="username" type="text" name="username" required>
+    </p>
+    <p>
+        <label class="form-label" for="pass">Password:</label>
+    </p>
+    <p>
+        <input class="form-input" placeholder="password" type="password" name="pass" required>
+    </p>
+    <p class="form-block">
+        <select name="status" id="">
+            <option value="client">Client</option>
+            <option value="friend">Friend</option>
+        </select>
+
+    </p>
+    <p><input type="submit" value="Log In" name="submit" id=""></p>
+    <p>or</p>
+    <p><input type="submit" value="Sign Up" name="submit" id=""></p>
+{% endblock %}
+

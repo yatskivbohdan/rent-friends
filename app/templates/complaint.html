@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Complaint{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block content %}
+    <p class="heading">
+        Complaint on friend
+    </p>
+    <p style="font-size: 20px">
+        Choose a friend and explain the reason
+    </p>
+
+    <label for="friends"></label>
+    <select name="friends">
+        {% for friend in friends %}
+            <option value="{{ friend[0] }}">{{ friend[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="orders"></label>
+    <select name="orders">
+        {% for order in orders %}
+            <option value="{{ order[0] }}">{{ order[1] }}</option>
+        {% endfor %}
+    </select>
+    <p>
+        <label for="date">Date:</label><br/>
+        <input class="date-input" type="date" name="date">
+    </p>
+    <p>
+        <label for="message">Complaint</label><br/>
+        <textarea class="complaint-area" name="message"></textarea>
+    </p>
+    <p><input type="submit" value="Send"></p>
+
+{% endblock %}

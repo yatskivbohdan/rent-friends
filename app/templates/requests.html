@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Requests{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block content %}
+
+    <label for="reqs">My unpaid bills:</label>
+    <select name="reqs">
+        {% for i in range(req_list|length) %}
+            <option value="{{ i }}">{{ req_list[i] }}</option>
+        {% endfor %}
+    </select>
+
+    <br><br><br><br><br>
+    <label for="C">C:</label>
+    <input type="text" name="C">
+
+    <label for="X">X:</label>
+    <input type="text" name="X">
+
+    <label for="N">N:</label>
+    <input type="number" name="N">
+
+
+    <label for="F">F:</label>
+    <input type="date" name="F">
+
+    <label for="T">T:</label>
+    <input type="date" name="T">
+
+
+    <label for="A">A:</label>
+    <input type="number" name="A">
+
+    <label for="B">B:</label>
+    <input type="number" name="B">
+
+
+    <p><input type="submit" value="Request"></p>
+
+{% endblock %}

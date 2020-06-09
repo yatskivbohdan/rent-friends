@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Return{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block content %}
+    <p class="heading">
+    Return your gift
+    </p>
+    <p style="font-size: 20px">
+        Enter the card number and deposit sum
+    </p>
+    <label for="gifts">My gifts:</label>
+    <select name="gifts">
+        {% for gift in gifts %}
+            <option value="{{ gift[0] }}">{{ gift[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <p><input type="submit" value="Send"></p>
+
+{% endblock %}

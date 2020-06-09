@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Withdraw{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block content %}
+    <p class="heading">
+        Withdraw your money
+    </p>
+    <p style="font-size: 20px">
+        Enter the card number and deposit sum
+    </p>
+    <p>
+        <label >Card:</label><br/>
+        <input class="form-input" type="text" required>
+    </p>
+    <p>
+        <label for="withdraw">Withdraw money:</label><br/>
+        <input class="form-input" type="number" name="withdraw" required>
+    </p>
+    <p><input type="submit" value="Submit"></p>
+
+{% endblock %}

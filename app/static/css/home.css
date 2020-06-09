@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    color: black;
+}
+
+.header-container {
+    background-color: #100e17;
+    display: flex;
+    justify-content: center;
+
+}
+
+h1 {
+    background-color: #100e17;
+    padding: 10px;
+    color:  white;
+}
+
+input[type=submit] {
+    background-color: #292f33;
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color:#414143;
+    width: 100%;
+
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.main-form .container {
+    display: flex;
+}
+
+.home-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.main-description {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 860px;
+}
+
+.footer-container {
+    min-height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #100e17;
+    color: white;
+}
+
+footer {
+    margin-top: 70px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 2px;
+}

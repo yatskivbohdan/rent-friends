@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Day Off{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block content %}
+     <p class="heading">
+       Take a day off
+    </p>
+    <p style="font-size: 20px">
+        Choose a date and explain the reason
+    </p>
+    <p>
+        <label for="date">Date:</label><br/>
+        <input class="date-input" type="date" name="date">
+    </p>
+    <p>
+        <label for="message">Explanation:</label><br/>
+        <textarea name="message"></textarea>
+    </p>
+
+    <p><input type="submit" value="Submit"></p>
+
+{% endblock %}

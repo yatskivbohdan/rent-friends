@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block content %}
+
+    {% for res in result %}
+    <h3>{{ res }}</h3>
+    {% endfor %}
+    <p><input type="submit" value="Submit"></p>
+
+{% endblock %}

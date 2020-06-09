@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Rent{% endblock %}
+{% block css %}<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/requests.css') }}">{% endblock %}
+{% block content %}
+    <p class="heading">
+    Rent a friend
+    </p>
+    <p style="font-size: 20px">
+    Choose one of the friends from the list below
+    </p>
+    {% for friend in friends %}
+        <p>
+            <input class="form-input" type="checkbox" style="text-decoration: none" value="{{ friend[0] }}" name="friend"> {{ friend[1] }}
+        </p>
+    {% endfor %}
+    <p>
+        <label class="form-label" for="locs">Location:</label><br/>
+        <select name="locs">
+            {% for location in locations %}
+                <p>
+                    <option value="{{ location[0] }}">{{ location[1] }}</option>
+                </p>
+            {% endfor %}
+    </select>
+    </p>
+    <p>
+        <label class="form-label" for="date">Date:</label><br/>
+        <input class="date-input" type="date" name="date">
+    </p>
+    <p><input type="submit" value="Rent"></p>
+{% endblock %}
+{% block additional %}
+{% endblock %}

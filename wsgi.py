@@ -1,3 +1,3 @@
-from flask_qa import app
+from app import app
 
 app_wsgi = app

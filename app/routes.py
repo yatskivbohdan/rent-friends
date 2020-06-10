@@ -2,10 +2,7 @@ from app import app, conn
 from flask import render_template, redirect, url_for, request, flash
 
 
-storage = {"id": 11,
-           "username": "admin",
-           "password": "adminpass",
-           "status": "client"}
+storage = {}
 
 @app.route('/')
 def start():
